@@ -1,0 +1,111 @@
+<div class="form-container">
+     <div class="heading">
+          create new blog post
+     </div>
+     <div class="row container z-depth-1" style="margin-top: 30px;">
+          <form class="col s12" style="border-radius: 5px; padding: 20px;" action="/admin/create-new-blog" method="POST">
+                         <h6 class="center grey-text">Title & images</h6>
+               <div class="row">
+                    <div class="input-field col s12 l6">
+                         <input id="title" name="title" type="text" class="validate" required>
+                         <label for="title">Blog title</label>
+                    </div>
+                     <div class="input-field col s12 l6">
+                         <input id="title" name="short_title" type="text" class="validate" required>
+                         <label for="title">Short title</label>
+                    </div>
+               </div>
+               <div class="row">
+                    {{#if categoriesLength}}
+                    <div class="col s12 l6">
+                         <select name="category" class="browser-default">
+                              <option value="" disabled selected>Select category</option>
+                              {{#each categories}}
+                                   <option value="{{this._id}}">{{this.title}}</option>
+                              {{/each}}
+                         </select>
+                         <label>Select blog category</label>
+                    </div>
+                    {{/if}}
+                    <div class="col s12 l6">
+                          <div class="file-field input-field">
+                              <div class="btn black">
+                                   <span>Select blog images</span>
+                                   <input type="hidden" value="" name="photo" id="productImageUrl">
+                                   <input type="file" id="imagePath" required>
+                              </div>
+                              <div class="file-path-wrapper">
+                                   <input class="file-path validate" type="text">
+                              </div>
+                         </div>
+                    </div>
+               </div>
+                         <h6 class="center grey-text">Main description</h6>
+               <div class="row">
+                     <div class="input-field col s12">
+                         <textarea id="description" name="description" class="materialize-textarea"></textarea>
+                         <label for="description">Your blog is about?</label>
+                    </div>
+               </div>
+               <div class="row center">
+                    <div class="input-field col s12 l6 offset-l3">
+                         <p id="uploadLabel"></p>
+                         <img src="" id="imgTag" class="responsive-img" width="350" alt="">
+                    </div>
+               </div>
+               <div class="row" style="padding: 10px;">
+                    <div class="input-field">
+                         <button type="submit" id="uploadBlog" name="submit" class="btn black col s12" >
+                              Upload blog
+                         </button>
+                    </div>
+               </div>
+          </form>
+     </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+     <script>
+          const firebaseConfig = {
+               apiKey: "AIzaSyBVRrpaUeVo61QSmHlgW5fu1AOSVBkJGmo",
+               authDomain: "sachine-tech-talks.firebaseapp.com",
+               databaseURL: "https://sachine-tech-talks.firebaseio.com",
+               projectId: "sachine-tech-talks",
+               storageBucket: "sachine-tech-talks.appspot.com",
+               messagingSenderId: "97613995911",
+               appId: "1:97613995911:web:31a068d41f777331277d22",
+               measurementId: "G-4BFTVTHNP5"
+          };
+          // Firebase initialization
+          firebase.initializeApp(firebaseConfig);
+          // setting storage to firebase storage
+          var storage = firebase.storage();
+          // Getting Images
+          const image = document.getElementById('imagePath');
+          const imageShowcase = document.getElementById('imgTag');
+          const uploadLabel = document.getElementById('uploadLabel');
+          const submitButton = document.getElementById('uploadBlog');
+          submitButton.disabled = true
+          // variable for returning Uploaded Image Url
+          const productImageUrl = document.getElementById('productImageUrl');
+          // FileUpload Function
+          function handleFileUploadChange(e) {
+               uploadLabel.innerHTML = 'Please do not submit till images shown uplaoded...'
+               selectedFile = e.target.files[0];
+               storage.ref().child(selectedFile.name).put(selectedFile)
+                    .then(data => {
+                         return data.ref.getDownloadURL();
+                    })
+                    .then(url => {
+                         uploadLabel.innerHTML = 'Photo is uploaded successfully';
+                         imageShowcase.src = url;
+                         productImageUrl.value = url;
+                         submitButton.disabled = false;
+                    })
+                    .catch(err => {
+                         console.log(err);
+                    })
+          }
+          // Performing File Upload
+          document.querySelector('#imagePath').addEventListener('change', handleFileUploadChange);
+     </script>

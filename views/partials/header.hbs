@@ -1,0 +1,220 @@
+{{#if login}}
+<div class="navbar-fixed">
+     <nav class="admin-navbar">
+          <div class="nav-wrapper">
+               <a href="#" data-target="mobile-demo" data-position="bottom" data-tooltip="Open sidenav" class="sidenav-trigger tooltipped show-on-large"><i class="material-icons">more_vert</i></a>
+               <a href="#!" class="brand-logo">sachintechtalks</a>
+               <ul class="right hide-on-med-and-down">
+                    <li style="text-transform: uppercase; margin-right: 10px;">
+                    {{user.name}}
+                    </li>
+                     <li  style="text-transform: uppercase; margin-right: 10px;">
+                         <a class="red-text" href="/admin/logout">
+                              <i class="material-icons left">power_settings_new</i> Disconnect
+                         </a>
+                    </li>
+               </ul>
+          </div>
+     </nav>
+</div>
+<ul class="sidenav z-depth-0" id="mobile-demo">
+          <li>
+               <div class="user-view">
+                    <div class="background">
+                         <img src="https://materializecss.com/images/office.jpg">
+                    </div>
+                    <a href="#user"><img class="circle" src="https://materializecss.com/images/yuna.jpg"></a>
+                    <a href="#name"><span class="white-text name">{{user.name}}</span></a>
+                    <a href="#email"><span class="white-text email">{{user.email}}</span></a>
+               </div>
+          </li>
+          <li><a href="/admin/dashboard" class="navlinks-of-mobile"><i class="material-icons blue-text">home</i> dashboard</a></li>
+          <li><a class="subheader">Manage posts</a></li>
+          <ul class="collapsible">
+               {{!-- category --}}
+               <li>
+                    <div class="collapsible-header navlinks-of-mobile"><i class="material-icons blue-text left">local_offer</i> category
+                    </div>
+                    <div class="collapsible-body">
+                         <ul>
+                              <li>
+                                   <span>
+                                        <a href="/admin/create-category" class="navlinks-of-mobile">
+                                             create new category
+                                        </a>
+                                   </span>
+                              </li>
+                              <li>
+                                   <span>
+                                        <a href="/admin/view-category" class="navlinks-of-mobile">
+                                             view / manage all category
+                                        </a>
+                                   </span>
+                              </li>
+                         </ul>
+                    </div>
+               </li>
+               {{!-- blog post --}}
+                    <li>
+                         <div class="collapsible-header navlinks-of-mobile"><i class="material-icons blue-text">post_add</i> Blogs</div>
+                         <div class="collapsible-body">
+                              <ul>
+                                   <li>
+                                        <span>
+                                             <a href="/admin/create-blog" class="navlinks-of-mobile">
+                                             create new blog
+                                             </a>
+                                        </span>
+                                   </li>
+                                   <li>
+                                        <span>
+                                             <a href="/admin/view-blog-admin" class="navlinks-of-mobile">
+                                             view / manage all blogs
+                                             </a>
+                                        </span>
+                                   </li>
+                              </ul>
+                         </div>
+                    </li>
+               {{!-- Affilate links --}}
+               <li>
+                    <div class="collapsible-header navlinks-of-mobile"><i class="material-icons blue-text">link</i> Affilate links</div>
+                    <div class="collapsible-body">
+                         <ul>
+                              <li>
+                                   <span>
+                                        <a href="#create-blog" class="navlinks-of-mobile">
+                                             create affilate links
+                                        </a>
+                                   </span>
+                              </li>
+                              <li>
+                                   <span>
+                                        <a href="#view-blog" class="navlinks-of-mobile">
+                                             view / manage affilate links
+                                        </a>
+                                   </span>
+                              </li>
+                         </ul>
+                    </div>
+               </li>
+               {{!-- pages --}}
+               <li><a class="subheader">Manage Pages</a></li>
+               <li>
+                    <a href="/admin/new-messages" class="navlinks-of-mobile">
+                         <i class="left material-icons blue-text">messages</i>
+                         View messages
+                    </a>
+               </li>
+               <li>
+                    <a href="#admin/about-settings" class="navlinks-of-mobile">
+                         <i class="left material-icons blue-text">emoji_people</i>
+                         About page
+                    </a>
+               </li>
+               <li><a href="#admin/about-settings" class="navlinks-of-mobile">
+                    <i class="left material-icons blue-text">phone</i>
+                         Contact page
+                         </a>
+               </li>
+               <li><a href="/admin/account-settings" class="navlinks-of-mobile">
+                    <i class="left material-icons blue-text">settings</i>
+                         Account settings
+                         </a>
+               </li>
+          </ul>
+          <li class="divider"></li>
+          <li><a class="subheader">Other links</a></li>
+          <li>
+                    <a href="#" data-target="slide-out" class="sidenav-close"><i class="material-icons blue-text">close</i> Close nav</a>
+          </li>
+          <li>
+               <a href="/admin/logout" class="navlinks-of-mobile">
+                    <i class="material-icons red-text">power_settings_new</i>
+                    Disconnect
+               </a>
+          </li>
+</ul>
+
+{{else}}
+<div class="logo-navigation center">
+    <div data-aos="fade-down">
+          <a class="brand-logo">
+               sachintechtalks
+          </a>
+    </div>
+</div>
+<div>
+     <nav class="category-nav">
+     <div class="nav-wrapper">
+          <ul class="left hide-on-large-only">
+               <li>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+               </li>
+               <li>
+                    <a href="/about-us"><i class="material-icons">person_pin</i></a>
+               </li>
+               <li>
+                    <a href="/contact-us"><i class="material-icons">phone</i></a>
+               </li>
+               <li>
+                    <a href="#search" class="modal-trigger hide-on-large-only"><i class="material-icons">search</i></a>
+               </li>
+          </ul>
+
+          <ul class="hide-on-med-and-down">
+               <li><a href="/" class="navlinks"><i class="material-icons black-text ">home</i></a></li>
+               <li><a href="#search" class="modal-trigger navlinks"><i class="material-icons black-text">search</i></a></li>
+               <li><a href="/about-us" class="navlinks">
+                    <i class="material-icons">person_pin</i>
+               </a></li>
+                <li><a href="/contact-us" class="navlinks">
+                    <i class="material-icons">phone</i>
+               </a></li>
+               {{#if categoryLength}}
+               <li class="black-text">|</li>
+                    {{#each category}}
+                         <li><a href="/category/{{this._id}}" class="navlinks">{{this.title}}</a></li>
+                    {{/each}}
+               <li class="black-text">|</li>
+               {{/if}}
+
+          </ul>
+     </div>
+</nav>
+</div>
+
+<ul class="sidenav" id="mobile-demo">
+     <li><a href="/" class="navlinks">home</a></li>
+     <li><a class="subheader">categories</a></li>
+          {{#if categoryLength}}
+          {{#each category}}
+               <li><a href="/category/{{this._id}}" class="navlinks">{{this.title}}</a></li>
+          {{/each}}
+     {{/if}}
+     <li><a class="subheader">Other links</a></li>
+     <li><a href="#" class="navlinks">About us</a></li>
+     <li><a href="#" class="navlinks">Contact us</a></li>
+
+</ul>
+
+<div id="search" class="modal bottom-sheet">
+     <div class="modal-content">
+          <h4>Seach blogs or category</h4>
+          <nav class="blue z-depth-0 container" style="margin-top: 50px;">
+               <div class="nav-wrapper">
+                    <form action="/search" method="POST">
+                         <div class="input-field">
+                              <input placeholder="Search blogs or category" name="search" id="search" type="search" required>
+                              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                              <i class="material-icons">close</i>
+                         </div>
+                    </form>
+               </div>
+          </nav>
+     </div>
+     <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">close</a>
+     </div>
+</div>
+{{/if}}

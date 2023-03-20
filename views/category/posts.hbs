@@ -1,0 +1,44 @@
+{{#if postLength}}
+<div class="row grey lighten-2" style="padding-top: 20px; padding-bottom: 50px!important">
+     <div data-aos="fade-up">
+          <div style=" font-size: 40px; font-weight: 700; text-transform: capitalize;" class="center">
+               {{selectedCategory.title}}  news feed
+          </div>
+     </div>
+     <div data-aos="fade-up">
+          {{#each posts}}
+          <div class="col s12 l3" style="margin-top: 50px;">
+               <div class="white post hoverable">
+                    <a href="/blog/{{this._id}}" class="waves-effect waves-black">
+                    <img src="{{this.postImage}}" class="responsive-img  waves-effect waves-light" alt="">
+                    </a>
+                    <div class="blog-title truncate" style="margin-top: 10px;">
+                         <a href="/blog/{{this._id}}">
+                              {{this.postTitle}}
+                         </a>
+                    </div>
+                    <div class="short-title" style="margin-top: 10px;">
+                         {{this.shortDescription}}
+                    </div>
+                    <div style="text-transform: capitalize; margin-top: 10px;">
+                         Blog category - {{this.category.title}}
+                    </div>
+                    <div style="margin-top: 20px; text-align: right;">
+                         <a href="/blog/{{this._id}}" class="btn black">
+                              Read more...
+                         </a>
+                    </div>
+               </div>
+
+          </div>
+          {{/each}}
+     </div>
+</div>
+{{else}}
+<div style="margin-top: 150px; margin-bottom:150px">
+     <div class="heading">
+          No {{selectedCategory.title}} blogs are uploaded <br><br>
+          <a href="/" class="btn black">Go back to homepage</a>
+     </div>
+</div>
+{{/if}}

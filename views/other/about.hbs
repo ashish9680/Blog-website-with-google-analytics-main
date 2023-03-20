@@ -1,0 +1,48 @@
+<div class="center about-container">
+     <div data-aos="fade-up" data-aos-duration="500">
+          <h4>Here is easy to find us!</h4>
+     </div>
+     <div data-aos="fade-up" data-aos-duration="300">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dicta!</p>
+     </div>
+     <div data-aos="fade-up">
+          <a href="/contact-us" class="btn pink">contact us now</a>
+     </div>
+</div>
+
+<div class="container">
+     <div class="row">
+          <div class="col s12 l6 center">
+               <img src="https://via.placeholder.com/450x450" class="responsive-img" alt="">
+          </div>
+          <div class="col s12 l6">
+               <div class="">
+                    <span class="sami-text">
+                         My name is
+                    </span>
+                    <br>
+                    <span class="pink-text about-us-section-title">sachintechtalks</span>
+               </div>
+               <p class="about-paragraph">&emsp;&emsp;&emsp;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum nihil sequi nostrum odit optio natus. Blanditiis dolorum provident accusamus ipsum esse, animi reiciendis, eos soluta neque adipisci tempora libero veniam! Nam nisi eum, dignissimos aperiam voluptatibus ipsum veritatis fugit. Quidem, culpa. Dignissimos doloribus, quo cupiditate sit hic quos iste!</p>
+          </div>
+     </div>
+</div>
+
+<div class="about-container-2 grey lighten-3">
+     <div class="heading">
+          Categories i have uploaded
+     </div>
+     {{#if categoryLength}}
+     <div class="row" style="margin-top: 30px;">
+          {{#each category}}
+          <div class="col s12 innerBox" data-aos="fade-up">
+               <a href="/category/{{this._id}}">
+                    <span class="about-category-title">
+                         {{this.title}}
+                    </span>
+               </a> - {{this.description}}
+          </div>
+          {{/each}}
+     </div>
+     {{/if}}
+</div>

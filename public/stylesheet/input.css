@@ -1,0 +1,52 @@
+.input-field label {
+    color: #000!important;
+    margin-left: 10px!important;
+}
+
+.input-field[type=email] {
+    border: 2px solid rgb(198, 197, 197)!important;
+}
+
+.input-field input[type=email]:focus+label {
+    color: #000!important;
+    box-shadow: none!important;
+}
+
+.input-field input[type=email]:focus {
+    box-shadow: none!important;
+    border: none!important;
+    border: 2px solid grey!important;
+}
+
+.input-field[type=password] {
+    border: 2px solid rgb(198, 197, 197)!important;
+}
+
+.input-field input[type=password]:focus+label {
+    color: #000!important;
+    box-shadow: none!important;
+}
+
+.input-field input[type=password]:focus {
+    box-shadow: none!important;
+    border: none!important;
+    border: 2px solid grey!important;
+}
+
+.checkbox-black[type="checkbox"].filled-in:checked+span:not(.lever):after {
+    border: 2px solid #000;
+    background-color: #000;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}

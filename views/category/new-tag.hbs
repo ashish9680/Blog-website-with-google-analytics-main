@@ -1,0 +1,36 @@
+<div class="form-container">
+     <div class="heading">
+          You have uploaded {{length}} categories till now
+     </div>
+    <div class="container">
+          <div class="form-container">
+               <div class="row">
+                    <form action="/admin/create-category" class="col s12" method="post">
+                         <div class="row">
+                              <div class="input-field col s12 l8 offset-l2">
+                                   <input id="title" name="title" type="text" class="validate">
+                                   <label for="title">Category title</label>
+                              </div>
+                         </div>
+                         <div class="row">
+                              <div class="input-field col s12 l8 offset-l2">
+                                   <input id="description" name="description" type="text" class="validate">
+                                   <label for="description">Category description</label>
+                              </div>
+                         </div>
+                         <div class="row">
+                              <div class="input-field">
+                                   <button type="submit" class="btn black col s12 l4 offset-l2">
+                                        Create new category
+                                   </button>
+
+                                   <a href="/admin/view-category" class="btn grey col s12 l4">
+                                        View all category
+                                   </a>
+                              </div>
+                         </div>
+                    </form>
+               </div>
+          </div>
+    </div>
+</div>

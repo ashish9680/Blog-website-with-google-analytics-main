@@ -1,0 +1,63 @@
+<div class="heading">
+     Edit {{blog.postTitle}}
+</div>
+
+<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+     <div class="row">
+          <div class="col s12 l6">
+               1
+          </div>
+          <div class="col s12 l6">
+                <div class="row">
+                    <form class="col s12" action="/admin/edit-blog-admin/{{blog._id}}" method="POST">
+                         <div class="row">
+                              <div class="input-field col s12">
+                                   <input id="title" name="title" type="text" value="{{blog.postTitle}}" class="validate">
+                                   <label for="title">Display title</label>
+                              </div>
+                         </div>
+                         <div class="row">
+                              <div class="input-field col s6">
+                                   <input id="sDescription" name="sDescription" type="text" value="{{blog.shortDescription}}" class="validate">
+                                   <label for="sDescription">Short Description</label>
+                              </div>
+                              <div class="col s6">
+                                   <label>Selected Category</label>
+                                   <select class="browser-default" name="category">
+                                        <option value="{{blog.category._id}}" aria-readonly="true" selected>{{blog.category.title}}</option>
+                                        {{#if categoryLength}}
+                                             {{#each category}}
+                                                  <option value="{{this._id}}">{{this.title}}</option>
+                                             {{/each}}
+                                        {{/if}}
+                                   </select>
+                              </div>
+                         </div>
+                         <div class="row">
+                              <h6>Blog image <sup>
+                                   (You cannot change image)
+                              </sup></h6>
+                              <div>
+                                   <img src="{{blog.postImage}}" class="responsive-img materialboxed" alt="">
+                              </div>
+                         </div>
+                         <div class="row">
+                              <div class="input-field col s12">
+                                   <textarea name="mDescription" id="description" class="materialize-textarea">
+                                        {{blog.mainDescription}}
+                                   </textarea>
+                                   <label for="description">Blog Description</label>
+                              </div>
+                         </div>
+                         <div class="row">
+                              <div class="input-field col s12">
+                                   <button class="btn black col s12">
+                                        Change details
+                                   </button>
+                              </div>
+                         </div>
+                    </form>
+        </div>
+          </div>
+     </div>
+</div>

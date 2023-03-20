@@ -1,0 +1,46 @@
+<div class="container" style="margin-top: 50px;">
+     <div class="heading" style=" margin-bottom: 100px;">
+          Total {{length}} categories are in the database <span class="right"><a href="/admin/create-category" class="btn black white-text"><i class="material-icons left">add</i> new</a></span>
+     </div>
+
+     <div class="category-table">
+          <table class="responsive-table highlight">
+               <thead>
+                    <tr>
+                         <th>Data id</th>
+                         <th>Category title</th>
+                         <th>Cagory description</th>
+                         <th>Action</th>
+                    </tr>
+               </thead>
+             {{#if length}}
+               <tbody>
+                    {{#each category}}
+                         <tr>
+                              <td>{{this._id}}</td>
+                              <td>{{this.title}}</td>
+                              <td>{{this.description}}</td>
+                              <td>
+                                   <div class="row">
+                                        <div class="col s6">
+                                             <a href="/admin/edit-category/{{this._id}}" class="btn blue">
+                                                  <i class="material-icons">edit</i>
+                                             </a>
+                                        </div>
+                                        <div class="col s6">
+                                             <form action="/admin/delete-category/{{this._id}}" method="POST">
+                                                  <button type="submit" class="btn red">
+                                                       <i class="material-icons">delete</i>
+                                                  </button>
+                                             </form>
+                                        </div>
+                                   </div>
+                              </td>
+                         </tr>
+                    {{/each}}
+               </tbody>
+          {{/if}}
+      </table>
+     </div>
+
+</div>

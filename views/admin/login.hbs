@@ -1,0 +1,46 @@
+<div class="row">
+     <div class="col s12 l6 login-bg hide-on-med-and-down">
+          <div class="login-bg-innertext">
+               Hello admin login to your account, and make changes
+          </div>
+     </div>
+     <div class="col s12 l6">
+          <div class="heading-2" style="margin-top: 50px; padding: 10px; text-align: center;">
+               Login with your credentials...
+          </div>
+          <p class="center red-text">
+                    {{#if messages}}
+                         {{messages}}
+                    {{/if}}
+          </p>
+          <div class="container">
+               <div class="row ">
+                    <form action="/admin" method="POST" class="col s12">
+                         <div class="row">
+                              <div class="input-field col s12" >
+                                   <input id="email" type="email" style="border: 2px solid grey;" name="email" class="validate" required>
+                                   <label for="email">Email</label>
+                              </div>
+                         </div>
+                         <div class="row">
+                              <div class="input-field col s12" >
+                                   <input id="password" type="password" style="border: 2px solid grey;" name="password" class="validate" required>
+                                   <label for="password">Password</label>
+                                        <p>
+                                             <label>
+                                                  <input type="checkbox" class="filled-in checkbox-black"/>
+                                                  <span>Show password</span>
+                                             </label>
+                                        </p>
+                              </div>
+                         </div>
+                         <div class="row">
+                              <button type="submit" class="btn col s12 black">
+                                   Login to your account
+                              </button>
+                         </div>
+                    </form>
+               </div>
+          </div>
+     </div>
+</div>

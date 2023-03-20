@@ -1,0 +1,40 @@
+{{#if dataLength}}
+     <div class="row">
+          {{#each data}}
+          <div class="col s12 l3" style="margin-top: 50px;">
+               <div class="white post hoverable">
+                    <a href="/blog/{{this._id}}" class="waves-effect waves-light">
+                    <img src="{{this.postImage}}" class="responsive-img  waves-effect waves-light" alt="">
+                    </a>
+                    <div class="blog-title truncate" style="margin-top: 10px;">
+                         <a href="/blog/{{this._id}}">
+                              {{this.postTitle}}
+                         </a>
+                    </div>
+                    <div class="short-title" style="margin-top: 10px;">
+                         {{this.shortDescription}}
+                    </div>
+                    <div style="text-transform: capitalize; margin-top: 10px;">
+                         Blog category - {{this.category.title}}
+                    </div>
+                    <div style="margin-top: 20px; text-align: right;">
+                         <a href="/blog/{{this._id}}" class="btn black">
+                              Read more...
+                         </a>
+                    </div>
+               </div>
+          </div>
+          {{/each}}
+     </div>
+     {{else}}
+     <div style=" text-align: center; margin-top: 100px; margin-bottom: 50px;">
+          <img src="/images/svg/question.svg" class="responsive-img" width="350" alt="">
+          <div class="heading" style="margin-top: 50px;">
+              Hmm!!! What are you looking for that's not found!!!
+          </div>
+          <div style="margin-top: 50px;">
+                <a href="/" class="btn black">Go to homepage</a>
+                <a href="#search" class="btn black modal-trigger">search again!!!</a>
+          </div>
+     </div>
+{{/if}}

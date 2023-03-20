@@ -1,0 +1,38 @@
+<div class="container">
+     <div class="heading" style="margin-top: 50px;">
+          You have received {{messagesLength}} messages
+     </div>
+     {{#if messagesLength}}
+     <table style="margin-top: 50px; margin-bottom: 50px;"  class="striped highlight responsive-table">
+        <thead>
+          <tr>
+              <th>ID</th>
+              <th>EMAIL</th>
+              <th>CONTACT</th>
+              <th>MESSAGES</th>
+              <th>ACTION</th>
+          </tr>
+        </thead>
+
+        <tbody>
+             {{#each messages}}
+          <tr>
+            <td>{{this._id}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.contact}}</td>
+            <td>{{this.message}}</td>
+            <td>
+                 <form action="/admin/delete-messages/{{this._id}}" method="POST">
+                    <button type="submit" class="btn red">
+                         <i class="material-icons">delete</i>
+                    </button>
+               </form>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      {{/if}}
+</div>
+
+

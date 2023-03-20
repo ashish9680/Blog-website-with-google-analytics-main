@@ -1,0 +1,91 @@
+<div class="dashboard">
+     Welcome here <span class="blue-text">
+          {{user.name}}
+     </span>
+</div>
+
+<div class="row" style="margin-top: 30px; margin-bottom: 30px">
+     <div class="col s12 l6">
+          <div class="card dashboard-card">
+               <div class="heading-2 center container">
+                    <i class="material-icons center-align">messages</i> New Messages
+               </div>
+               <div style="margin-top: 50px;">
+                    {{#if messagesLength}}
+                    <ul class="collection">
+                         {{#each messages}}
+                         <li class="collection-item avatar">
+                              <span class="title">{{this.email}}</span>
+                              <p>{{this.contact}}<br>
+                              {{this.message}}
+                              </p>
+                         </li>
+                         {{/each}}
+                    </ul>
+                      {{else}}
+                    <div class="heading">
+                         No messages was recevied till now!!!
+                    </div>
+                    {{/if}}
+                    <div class="center" style="margin-top: 33px;">
+                         <a href="/admin/new-messages">View all</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="col s12 l3">
+          <div class="card dashboard-card">
+               <div class="center">
+                    <span class="dashboard-icons blue-text">
+                         {{categoryLength}}
+                    </span>
+                   <div class="heading" style="margin-bottom: 10px;">
+                         Categories uploaded
+                    </div>
+               </div>
+               <div class="divider"></div>
+               <div class="row" style="margin-bottom: 0px!important; margin-top: 20px;">
+                    <div class="col s6 center">
+                         <a href="/admin/create-category" class="btn black">
+                              <i class="material-icons">add</i>
+                         </a>
+                    </div>
+                    <div class="col s6 center">
+                         <a href="/admin/view-category" class="btn black">
+                              <i class="material-icons">preview</i>
+                         </a>
+                    </div>
+               </div>
+          </div>
+     </div>
+      <div class="col s12 l3">
+          <div class="card dashboard-card">
+               <div class="center">
+                    <span class="dashboard-icons blue-text">
+                         {{blogLength}}
+                    </span>
+                   <div class="heading" style="margin-bottom: 10px;">
+                         Blogs uploaded
+                    </div>
+               </div>
+               <div class="divider"></div>
+               <div class="row" style="margin-bottom: 0px!important; margin-top: 20px;">
+                    <div class="col s6 center">
+                         <a href="/admin/create-blog" class="btn black">
+                              <i class="material-icons">add</i>
+                         </a>
+                    </div>
+                    <div class="col s6 center">
+                         <a href="/admin/view-blog-admin" class="btn black">
+                              <i class="material-icons">preview</i>
+                         </a>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<div class="divider"></div>
+<div style="margin-top: 50px; text-align: center;" class="heading-2">
+     Affilate marketing section
+</div>

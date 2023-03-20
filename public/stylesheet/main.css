@@ -1,0 +1,339 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo-navigation {
+    padding: 20px!important;
+}
+
+.brand-logo {
+    font-size: 35px;
+    font-weight: 700;
+    padding: 0px!important;
+    color: black;
+}
+
+.category-nav {
+    box-shadow: none;
+    background-color: cornflowerblue;
+}
+
+.admin-navbar {
+    box-shadow: none;
+    background-color: #333945;
+}
+
+.navlinks {
+    text-transform: uppercase;
+    color: black;
+    transition: 500ms;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.navlinks:hover {
+    background: none;
+}
+
+.navlinks-of-mobile {
+    text-transform: capitalize!important;
+    font-weight: 14px;
+    color: black;
+}
+
+.navlinks-of-mobile:hover {
+    background: none;
+}
+
+.heading {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: inherit;
+}
+
+.heading-2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    box-shadow: none;
+    text-transform: initial;
+}
+
+thead tr th {
+    border: 1px solid grey;
+    text-align: center;
+    color: white;
+    background: #6c9dff;
+}
+
+tbody tr td {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.blog-title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.post {
+    padding: 10px;
+}
+
+.short-title {
+    color: gray;
+    margin-top: 10px;
+}
+
+.category {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.numberShowcase {
+    background: rgba(100, 148, 237, 0.292);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.numberShowcaseText {
+    color: black;
+    text-transform: capitalize;
+    margin-top: 25px;
+    font-size: 35px;
+}
+
+.numberShowcase-2 {
+    margin-top: 20px;
+    background: rgba(100, 148, 237, 0.292);
+    padding: 20px;
+    text-align: center;
+}
+
+.numberShowcaseText-2 {
+    color: black;
+    text-transform: capitalize;
+    margin-top: 25px;
+    font-size: 35px;
+}
+
+#back2Top {
+    width: 50px;
+    /* line-height: 40px; */
+    overflow: hidden;
+    /* z-index: 999; */
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: rgb(60, 60, 255);
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 100px;
+}
+
+#back2Top:hover {
+    background-color: #333;
+    color: white;
+}
+
+.paragraph {
+    white-space: nowrap!important;
+    font-size: 20px;
+    color: #333;
+    margin: 10px;
+    white-space: pre-wrap!important;
+    justify-content: center!important;
+}
+
+.commment-section {
+    border: 1px solid grey;
+    margin-bottom: 50px;
+}
+
+.parallax-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px!important;
+    font-size: 35px;
+    font-weight: 700;
+    /* margin-top: 200px; */
+    height: 100%;
+    color: white;
+}
+
+.login-bg {
+    height: 90vh;
+    padding: 20px;
+    background: url(../images/login-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.login-bg-innertext {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 2em;
+    margin-top: 50%!important
+}
+
+.dashboard {
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.dashboard-card {
+    padding: 10px;
+}
+
+.dashboard-icons {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+option {
+    color: black!important;
+    text-transform: capitalize;
+    padding: 10px!important;
+}
+
+footer {
+    background-color: cornflowerblue!important;
+}
+
+.about-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+    background: #333;
+    margin-bottom: 50px;
+}
+
+.about-us-section-title {
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.about-container-2 {
+    padding: 30px;
+    color: black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.sami-text {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.about-paragraph {
+    font-size: 20px;
+}
+
+.icons {
+    font-size: 50px;
+    background: white;
+    margin: 10px;
+    padding: 30px!important;
+    text-align: center;
+}
+
+.innerBox {
+    padding: 20px!important;
+    margin-top: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+.about-category-title {
+    text-transform: capitalize;
+}
+
+.contact-container {
+    height: 50vh;
+    margin-top: 0px!important;
+    padding: 20px;
+}
+
+.contact-title {
+    text-transform: uppercase;
+    font-weight: 1000!important;
+    margin-top: 150px;
+}
+
+.contact-us-main-section {
+    margin-top: 100px;
+    box-shadow: 5px 5px 15px 0.5px #6c9dff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.heading-3 {
+    font-size: 40px;
+    font-weight: 700;
+    color: grey;
+    margin-top: 50px;
+}
+
+.contact-paragraph {
+    color: grey;
+    font-weight: 600;
+}
+
+.facebook-btn {
+    color: #3b5998;
+    background: transparent;
+}
+
+.instagram-btn {
+    color: #3f729b;
+    background: transparent;
+}
+
+.twitter-btn {
+    color: #00acee;
+    background: transparent;
+}
+
+.youtube-btn {
+    color: #FF0000;
+    background: transparent;
+}
+
+.icons-social {
+    font-size: 20px!important
+}
+
+.contact-us-form {
+    background: white;
+    padding: 20px!important;
+    margin-bottom: 0px!important;
+    border-radius: 10px;
+}
